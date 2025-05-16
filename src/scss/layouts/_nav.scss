@@ -22,6 +22,8 @@
 
       &__child {
         position: relative;
+        user-select: none;
+        cursor: pointer;
 
         &:hover .item i {
           transform: rotate(-180deg);
