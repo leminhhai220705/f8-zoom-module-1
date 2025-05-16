@@ -53,7 +53,7 @@
     }
 
     .about-interview .cols:first-child .interview-desc {
-      background-image: url("./img/raymond-king.png");
+      background-image: url("../../img/raymond-king.png");
       background-repeat: no-repeat;
       background-position: center;
       @include abstracts.screen(xl) {
@@ -69,7 +69,7 @@
     }
 
     .about-interview .cols:last-child .interview-desc {
-      background-image: url("./img/john-morgan.png");
+      background-image: url("../../img/john-morgan.png");
       background-repeat: no-repeat;
       background-position: center;
       @include abstracts.screen(xl) {
