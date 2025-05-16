@@ -1,0 +1,143 @@
+@use "../abstracts/" as abstracts;
+.footer-wrapper {
+  min-height: 58.3rem;
+  background-color: abstracts.$black-home;
+  padding: 5.5rem 5.5rem 0;
+  margin-top: 8.5rem;
+  color: #ffffff;
+
+  .footer {
+    .footer-upper {
+      border-bottom: 1px solid #313d39;
+      padding-bottom: 5rem;
+
+      .map-wrapper {
+        @include abstracts.screen(md) {
+          display: flex;
+        }
+      }
+      .website-info {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5rem;
+
+        @include abstracts.screen(xl) {
+          flex-direction: column;
+          gap: 5rem;
+        }
+
+        @include abstracts.screen(lg) {
+          padding: 0;
+        }
+
+        @include abstracts.screen(md) {
+          padding: 0;
+        }
+      }
+
+      .website-info .website-info__child {
+        max-width: 23.7rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .title {
+          font-family: abstracts.$Manrope-font;
+          font-weight: 700;
+          font-size: 2rem;
+        }
+
+        .content a,
+        .content > li {
+          display: block;
+          padding: 0.6rem 0;
+          font-family: abstracts.$Manrope-font;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 28px;
+          color: #beccc7;
+        }
+      }
+
+      .map {
+        @include abstracts.screen(xl) {
+          max-width: 100%;
+        }
+
+        @include abstracts.screen(md) {
+          padding: 0;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .map img {
+        @include abstracts.screen(xl) {
+          max-width: 100%;
+        }
+        @include abstracts.screen(md) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .footer-lower {
+      @include abstracts.screen(lg) {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem 4rem;
+      }
+
+      @include abstracts.screen(md) {
+        padding: 2rem 0;
+      }
+
+      padding: 4rem 0 3rem;
+      display: flex;
+      justify-content: space-between;
+
+      .logo-legal {
+        @include abstracts.createLogo();
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+      }
+
+      .logo-legal .legal {
+        font-size: 1.4rem;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 400;
+        color: #beccc7;
+        letter-spacing: 1px;
+      }
+
+      .social-media-contact {
+        display: flex;
+        width: 18rem;
+        max-width: 100%;
+        align-items: end;
+      }
+
+      .social-media-contact li {
+        flex: 1;
+      }
+
+      .social-media-contact li a {
+        display: block;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #313d39;
+        color: #ffffff;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @include abstracts.screen(md) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}

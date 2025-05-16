@@ -1,0 +1,300 @@
+@use "../../abstracts/" as abstracts;
+@use "../../vendors/grid-system-newest" as grid-system;
+
+.about-wrapper {
+  .header-nav-wrapper {
+    background-color: abstracts.$yellow-light;
+    padding: 1rem 0;
+    margin-top: -1rem;
+  }
+
+  .about-heading-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 4.3rem 0;
+
+    .about-heading {
+      font-family: abstracts.$Roboto-Slab-font;
+      font-size: 4.2rem;
+      font-weight: 700;
+      max-width: 77rem;
+      min-height: 15.6rem;
+      text-align: center;
+      line-height: 52px;
+
+      @include abstracts.screen(md) {
+        font-size: 2.2rem;
+        line-height: 3.2rem;
+        max-width: 335px;
+      }
+    }
+
+    @include abstracts.screen(md) {
+      padding: 4.3rem 0 0 0;
+    }
+  }
+
+  .about-interview-wrapper {
+    padding-top: 4.5rem;
+
+    .about-interview {
+      width: 117rem;
+      max-width: 100%;
+      min-height: 42.6rem;
+    }
+
+    .about-interview .rows {
+      min-height: 42.6rem;
+    }
+
+    .about-interview .cols .interview-desc {
+      width: 100%;
+      height: 100%;
+    }
+
+    .about-interview .cols:first-child .interview-desc {
+      background-image: url("./img/raymond-king.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      @include abstracts.screen(xl) {
+        background-size: cover;
+        min-height: 42.6rem;
+      }
+
+      @include abstracts.screen(md) {
+        width: 39.5rem;
+        max-width: 100%;
+        min-height: 25rem;
+      }
+    }
+
+    .about-interview .cols:last-child .interview-desc {
+      background-image: url("./img/john-morgan.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      @include abstracts.screen(xl) {
+        background-size: cover;
+        min-height: 42.6rem;
+      }
+
+      @include abstracts.screen(md) {
+        width: 39.5rem;
+        max-width: 100%;
+        min-height: 25rem;
+      }
+    }
+
+    .interview-desc {
+      display: flex;
+      align-items: end;
+    }
+
+    .about-interview .cols {
+      @include abstracts.screen(md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    .about-interview .cols .interview-desc .banner-desc {
+      padding: 1.6rem;
+      background-color: abstracts.$orange-home;
+      max-width: 100%;
+      width: 100%;
+
+      .interview-heading {
+        font-size: 2.2em;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 700;
+        color: #ffffff;
+
+        @include abstracts.screen(md) {
+          font-size: 1.2rem;
+          padding-top: 0.8rem;
+        }
+      }
+
+      .sub-interview-heading {
+        font-size: 1.6em;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 400;
+        color: #ffffff;
+        padding-top: 2rem;
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+          padding-top: 1.3rem;
+        }
+      }
+
+      @include abstracts.screen(md) {
+        max-width: 100%;
+        height: 7.05rem;
+        padding: 0.73rem;
+      }
+    }
+
+    @include abstracts.screen(xl) {
+      padding: 4.3rem 0.5rem;
+    }
+
+    @include abstracts.screen(md) {
+      padding-top: 0;
+    }
+  }
+
+  //   start about history
+  .about-history-wrapper {
+    padding-top: 9.7rem;
+
+    .about-history {
+      width: 117rem;
+      max-width: 100%;
+
+      .rows .cols {
+        @include abstracts.screen(xl) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
+    .about-history__content {
+      max-width: 47rem;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.8rem;
+
+      .sub-heading,
+      .desc {
+        font-family: abstracts.$Roboto-Slab-font;
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      .heading {
+        font-family: abstracts.$Roboto-Slab-font;
+        font-size: 4.2rem;
+        font-weight: 700;
+        line-height: 52px;
+
+        @include abstracts.screen(md) {
+          font-size: 3rem;
+        }
+      }
+
+      .desc {
+        font-family: abstracts.$Manrope-font;
+        line-height: 3rem;
+      }
+
+      @include abstracts.screen(xl) {
+        margin-left: -10rem;
+      }
+
+      @include abstracts.screen(md) {
+        margin-left: 0;
+      }
+    }
+
+    .about-history__banner {
+      max-width: 57rem;
+      min-height: 57rem;
+      aspect-ratio: 1 / 1;
+
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scaleX(-1);
+      }
+
+      @include abstracts.screen(md) {
+        width: 31.8rem;
+        max-width: 100%;
+        min-height: 31.8rem;
+      }
+    }
+
+    @include abstracts.screen(xl) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    @include abstracts.screen(md) {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+  //   end about history
+
+  //   start exp
+
+  .about-exp-wrapper {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    .about-exp {
+      padding: 0 5rem;
+      min-height: 36.8rem;
+      width: 100%;
+      background-color: abstracts.$yellow-light;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.6rem;
+
+      @include abstracts.screen(md) {
+        padding: 0 2rem;
+      }
+
+      .sub-heading,
+      .heading,
+      .desc {
+        font-family: abstracts.$Roboto-Slab-font;
+        font-size: 1.8rem;
+        color: #0e1412;
+        padding: 1rem 0;
+        text-align: center;
+      }
+
+      .sub-heading {
+        font-weight: 400;
+
+        @include abstracts.screen(md) {
+          font-size: 1.2rem;
+        }
+      }
+
+      .heading {
+        font-weight: 700;
+        font-size: 4.2rem;
+
+        @include abstracts.screen(md) {
+          font-size: 3rem;
+          line-height: 3.7rem;
+        }
+      }
+
+      .desc {
+        font-weight: 400;
+        font-family: abstracts.$Manrope-font;
+        line-height: 3rem;
+        color: #586863;
+        max-width: 77rem;
+        text-align: center;
+
+        @include abstracts.screen(md) {
+          font-size: 1.2rem;
+          line-height: 2rem;
+        }
+      }
+    }
+  }
+
+  // end exp
+}

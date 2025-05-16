@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nav</title>
+
+    <%- include("./partial/head.ejs") %>
+  </head>
+  <body>
+    <div class="about-wrapper">
+      <header class="about-header">
+        <!-- header-nav -->
+        <div class="header-nav-wrapper">
+          <%- include("./partial/header-nav.ejs") %>
+        </div>
+        <!-- end header-nav -->
+
+        <!--
+       start Heading
+       -->
+        <div class="about-heading-wrapper">
+          <h1 id="about-interview" class="about-heading">
+            You can count on the undivided attention of a team that prizes
+            relationships over profits.
+          </h1>
+        </div>
+        <!-- 
+       end Heading 
+       -->
+      </header>
+
+      <main class="about-main">
+        <!-- 
+       start about-interview-wrapper
+       -->
+        <div class="about-interview-wrapper">
+          <div class="about-interview container">
+            <div
+              class="rows g-x-3 g-y-lg-3 g-y-xl-3 rows-cols-2 rows-cols-xl-1 rows-cols-lg-1"
+            >
+              <!-- banner-1 -->
+              <div class="cols">
+                <article class="interview-desc">
+                  <div class="banner-desc">
+                    <h4 class="interview-heading">
+                      An Interview With Raymond King
+                    </h4>
+                    <p class="sub-interview-heading">
+                      Comparison between various civil law and private law
+                      institutions.
+                    </p>
+                  </div>
+                </article>
+              </div>
+              <!-- banner-2 -->
+              <div class="cols">
+                <article class="interview-desc">
+                  <div class="banner-desc">
+                    <h4 class="interview-heading">
+                      An Interview With John Morgan
+                    </h4>
+                    <p class="sub-interview-heading">
+                      Comparison between various civil law and private law
+                      institutions.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 
+       end about-interview-wrapper
+       -->
+
+        <!-- 
+        start about-history
+       -->
+
+        <div class="about-history-wrapper">
+          <section class="about-history container">
+            <div
+              class="rows g-y-lg-3 g-y-xl-3 rows-cols-2 rows-cols-xl-1 rows-cols-lg-1"
+            >
+              <div class="cols">
+                <div class="about-history__content">
+                  <p id="about-history" class="sub-heading">History</p>
+                  <h2 class="heading">Through And Complete Attention to Law</h2>
+                  <p class="desc">
+                    While Mr. Parmele, his paralegals, and clerks are busy
+                    assisting you with your forms, helping you assemble your
+                    documentation, and keeping you updated regularly, Mr.
+                    Parmele is busy behind the scenes, focusing on winning your
+                    case. Your initial meeting with Parmele Law Firm sets in
+                    motion the difficult – and tedious – process of getting your
+                    benefits for you.
+                  </p>
+                </div>
+              </div>
+              <div class="cols">
+                <figure class="about-history__banner">
+                  <img src="./img/about-history.png" alt="history_banner" />
+                </figure>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- 
+        end about-history
+       -->
+
+        <!-- 
+       start about-exp
+       -->
+
+        <div class="about-exp-wrapper">
+          <section class="about-exp">
+            <p id="about-experience" class="sub-heading">OUR EXPERIENCE</p>
+            <h2 class="heading">20 Years of Experience In Various Cases</h2>
+            <p class="desc">
+              Asbestos.com is proud to donate to organizations that raise
+              awareness and support ongoing research on mesothelioma, cancer
+            </p>
+          </section>
+        </div>
+
+        <!-- 
+       end about-exp
+       -->
+      </main>
+
+      <%- include("./partial/footer.ejs") %>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

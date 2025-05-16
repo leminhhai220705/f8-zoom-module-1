@@ -1,0 +1,202 @@
+@use "../../abstracts/" as abstracts;
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  .contact-nav-wrapper {
+    background-color: abstracts.$yellow-light;
+    padding: 2rem 0;
+
+    @include abstracts.screen(md) {
+      padding: 1rem 0;
+    }
+  }
+
+  .contact-main {
+    width: 117rem;
+    max-width: 100%;
+    min-height: 71.2rem;
+    // padding: 0 3rem;
+    @include abstracts.margin-to-center();
+
+    @include abstracts.screen(xl) {
+      width: 70rem;
+    }
+
+    @include abstracts.screen(md) {
+      padding: 0 3rem;
+    }
+
+    .contact-heading-wrapper {
+      padding: 84px 0 40px;
+
+      .contact-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include abstracts.screen(md) {
+          gap: 1rem;
+        }
+      }
+
+      .contact-heading .sub-heading {
+        color: #586863;
+        font-size: 1.8rem;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 500;
+
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+        }
+      }
+
+      .contact-heading .heading {
+        color: #0e1412;
+        font-size: 4.2rem;
+        font-family: abstracts.$Roboto-Slab-font;
+        line-height: 52px;
+        width: 67rem;
+        max-width: 100%;
+        @include abstracts.screen(md) {
+          font-size: 2.1rem;
+          line-height: 26px;
+          width: 33.5rem;
+        }
+      }
+
+      .desc {
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: #586863;
+        font-family: abstracts.$DM-Sans-font;
+        line-height: 28px;
+        letter-spacing: -1%;
+        width: 530px;
+        max-width: 100%;
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+          line-height: 16px;
+          width: 26.5rem;
+        }
+      }
+    }
+
+    .form-wrapper {
+      padding-top: 2rem;
+
+      .form-contact .input-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 57rem);
+        grid-auto-columns: auto;
+        grid-template-rows: repeat(4, 7.5rem);
+        grid-template-areas:
+          "Name Company"
+          "Email Phone"
+          "Message Message"
+          "Message Message";
+        gap: 2.5rem;
+
+        @include abstracts.screen(xl) {
+          grid-template-columns: repeat(2, auto);
+        }
+
+        @include abstracts.screen(md) {
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(6, 6rem);
+          grid-template-areas:
+            "Name"
+            "Company"
+            "Email"
+            "Phone"
+            "Message"
+            "Message";
+        }
+
+        .input-fill {
+          font-family: abstracts.$Manrope-font;
+          font-size: 1.4rem;
+          padding: 15px 20px;
+          outline: none;
+          border: none;
+          background-color: #f2f2f2;
+          transition: box-shadow 0.3s ease-in-out;
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+
+        .input-fill:focus:placeholder-shown {
+          box-shadow: 0 0 6px 2px #fd6038;
+        }
+
+        .input-fill:invalid:not(:placeholder-shown) {
+          box-shadow: 0 0 6px 2px #dc3545;
+        }
+
+        .input-fill::placeholder {
+          font-family: abstracts.$Manrope-font;
+          font-weight: 400;
+          color: #586863;
+          font-size: 1.4rem;
+        }
+
+        .input-1 {
+          grid-area: Name;
+          .input-fill {
+            width: 100%;
+            height: 100%;
+            text-transform: capitalize;
+          }
+        }
+
+        .input-2 {
+          grid-area: Company;
+          .input-fill {
+            width: 100%;
+            height: 100%;
+            text-transform: capitalize;
+          }
+        }
+
+        .input-3 {
+          grid-area: Email;
+          .input-fill {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .input-4 {
+          grid-area: Phone;
+          .input-fill {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        .input-5 {
+          grid-area: Message;
+          .input-fill {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      .submit-form-btn {
+        width: 144px;
+        max-width: 100%;
+        min-height: 62px;
+        border-radius: 31px;
+        background-color: #0e1412;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 600;
+        font-size: 1.6rem;
+        color: #ffffff;
+        margin-top: 3rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

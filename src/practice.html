@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+    <%- include("./partial/head.ejs") %>
+  </head>
+  <body>
+    <div class="practice-wrapper">
+      <header class="practice-header-wrapper">
+        <div class="practice-header-nav">
+          <%- include("./partial/header-nav.ejs") %>
+        </div>
+        <div class="header-content">
+          <h1 class="heading">Our Practice Areas to Serve You</h1>
+          <p class="slg">
+            Where every injury is personal. We are a different kind of law firm.
+            Let our small, passionate group of trial lawyers fight for your
+            rights!
+          </p>
+        </div>
+      </header>
+
+      <main class="practice-main">
+        <!-- Start Practice-Area -->
+        <div class="practice-area-wrapper">
+          <section class="practice-area">
+            <div class="practice-area__heading">
+              <p id="practice-services" class="sub-heading">#Services</p>
+              <h2 class="heading">Our Practice Areas</h2>
+              <p class="desc">
+                Our Law Office provides a professional experience for all our
+                clients, helping them navigate their legal rights.
+              </p>
+            </div>
+
+            <div class="practice-area__content">
+              <article class="content-item content-1">
+                <button class="select-content">
+                  <a href="">Personal Injury Law</a>
+                </button>
+              </article>
+              <article class="content-item content-2">
+                <button class="select-content">
+                  <a href="">Employment Law</a>
+                </button>
+              </article>
+              <article class="content-item content-3">
+                <button class="select-content">
+                  <a href="">Immigration Law</a>
+                </button>
+              </article>
+              <article class="content-item content-4">
+                <button class="select-content">
+                  <a href="">Family Law</a>
+                </button>
+              </article>
+              <article class="content-item content-5">
+                <button class="select-content">
+                  <a href="">Divorce Law</a>
+                </button>
+              </article>
+              <article class="content-item content-6">
+                <button class="select-content">
+                  <a href="">Property Law</a>
+                </button>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- End Practice-Area -->
+
+        <!-- Start Practice-Consultant -->
+        <div class="practice-consultant-wrapper">
+          <div class="practice-consultant">
+            <p id="practice-cta" class="sub-heading">#CTA</p>
+            <h2 class="heading">Dealing With a Issue?</h2>
+            <p class="desc">
+              Where every injury is personal. We are a different kind of law
+              firm. Let our small, passionate group of trial lawyers fight for
+              your rights!
+            </p>
+            <button class="btn consultant-btn">
+              <a href="">Get a Consultations</a>
+            </button>
+          </div>
+        </div>
+        <!-- End Practice-Consultant -->
+      </main>
+
+      <!-- Footer Practice -->
+      <%- include("./partial/footer.ejs") %>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

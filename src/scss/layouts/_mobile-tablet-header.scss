@@ -1,0 +1,231 @@
+@use "../abstracts/" as abstracts;
+
+// <!-- Mobile/ Tablet nav button -->
+.mobile-tablet-nav {
+  display: none;
+
+  .xmark-nav {
+    display: none;
+  }
+
+  @include abstracts.screen(lg) {
+    padding: 6rem 5rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .nav-menu {
+      position: absolute;
+      z-index: 900;
+      top: 120px;
+      left: 50%;
+      translate: -50% 0;
+      width: 50rem;
+      transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+      display: flex;
+      background-color: #ffffff;
+      opacity: 0;
+      visibility: hidden;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1rem 0;
+      box-shadow: 2px 6px 25px -1px rgba(0, 0, 0, 0.75) inset;
+      -webkit-box-shadow: 2px 6px 25px -1px rgba(0, 0, 0, 0.75) inset;
+      -moz-box-shadow: 2px 6px 25px -1px rgba(0, 0, 0, 0.75) inset;
+      .menu-item {
+        padding: 0.5rem 2.8rem;
+
+        .sub-menu {
+          max-height: 0;
+          border-top: none;
+          transform: scaleY(0);
+          transform-origin: top;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out,
+            opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        :is(
+            .menu-check,
+            .menu-check-about,
+            .menu-check-attorneys,
+            .menu-check-practice,
+            .menu-check-page
+          ):checked
+          + label
+          + .sub-menu {
+          transform: scaleY(1);
+          visibility: visible;
+          opacity: 1;
+          max-height: 9999px;
+        }
+
+        .sub-menu a {
+          color: abstracts.$orange-home;
+          text-shadow: 1px -1px 23px rgba(253, 96, 56, 0.93);
+        }
+
+        .sub-menu :is(.sub-menu__item + .sub-menu__item) {
+          border-top: 0.5px solid #e9e5e5;
+        }
+      }
+
+      .menu-item + .menu-item > a {
+        border-top: 1px solid #ccc;
+      }
+
+      .menu-item a {
+        display: block;
+        padding: 1.5rem;
+        text-align: center;
+        line-height: 6.6rem;
+        font-size: 1.8rem;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 400;
+      }
+    }
+    .hidden-checkbox:checked ~ .nav-menu {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .menu-bar {
+      display: inline-block;
+      font-size: 3.5rem;
+
+      @include abstracts.screen(md) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .backdrop {
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      inset: 0;
+      background-color: #000000;
+      z-index: 100;
+      transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+
+    .hidden-checkbox:checked ~ .backdrop.for-nav {
+      visibility: visible;
+      opacity: 0.3;
+
+      .menu-bar {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .menu-bar i {
+      padding: 1.2rem;
+      cursor: pointer;
+    }
+
+    .phone-contact {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .call {
+        font-family: abstracts.$Manrope-font;
+        font-weight: 400;
+        font-size: 1.8rem;
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+        }
+      }
+
+      .phone-number {
+        font-family: abstracts.$Manrope-font;
+        font-weight: 700;
+        font-size: 2.5rem;
+        @include abstracts.screen(md) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @include abstracts.screen(md) {
+    .hidden-checkbox:checked ~ .nav-menu {
+      transform: translateX(0);
+    }
+
+    .nav-menu {
+      top: -20px;
+      left: 150px;
+      min-height: 160vh;
+      width: 30rem;
+      box-shadow: 2px 6px 25px -1px rgba(0, 0, 0, 0.75) inset;
+      -webkit-box-shadow: 2px 6px 25px -1px rgba(0, 0, 0, 0.75) inset;
+      -moz-box-shadow: 2px 6px 25px -1px rgba(0, 0, 0, 0.75) inset;
+      padding: 5rem 0;
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-105%);
+      transition: transform 0.4s ease-in-out;
+
+      .menu-item {
+        .sub-menu {
+          max-height: 0;
+          border-top: none;
+          transform: scaleY(0);
+          transform-origin: top;
+          opacity: 0;
+          visibility: hidden;
+          transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out,
+            opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+
+        :is(
+            .menu-check,
+            .menu-check-about,
+            .menu-check-attorneys,
+            .menu-check-practice,
+            .menu-check-page
+          ):checked
+          + label
+          + .sub-menu {
+          transform: scaleY(1);
+          visibility: visible;
+          opacity: 1;
+          max-height: 9999px;
+        }
+
+        .sub-menu a {
+          color: abstracts.$orange-home;
+          text-shadow: 1px -1px 23px rgba(253, 96, 56, 0.93);
+        }
+
+        .sub-menu :is(.sub-menu__item + .sub-menu__item) {
+          border-top: 0.5px solid #e9e5e5;
+        }
+      }
+
+      .menu-item a {
+        padding: 2rem 0.5rem;
+      }
+
+      .xmark-nav {
+        display: inline-block;
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-size: 2rem;
+        color: #545454bd;
+        cursor: pointer;
+
+        i {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+  @include abstracts.screen(md) {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+}

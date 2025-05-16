@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <%- include("./partial/head.ejs") %>
+  </head>
+  <body>
+    <div class="contact-wrapper">
+      <header class="contact-nav-wrapper">
+        <%- include("./partial/header-nav.ejs") %>
+      </header>
+
+      <main class="contact-main">
+        <div class="contact-heading-wrapper">
+          <div class="contact-heading">
+            <p class="sub-heading">Contact us</p>
+            <h1 class="heading">We Are Always Ready To Hear For You.</h1>
+            <p class="desc">
+              The right move at the right time saves your investment. live the
+              dream of expanding your business.
+            </p>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <form action="" class="form-contact" autocomplete="off">
+            <div class="input-wrapper">
+              <div class="input-container input-1">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="input-fill"
+                  spellcheck="false"
+                  placeholder="Enter your name"
+                  required
+                  minlength="4"
+                />
+              </div>
+              <div class="input-container input-2">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="input-fill"
+                  spellcheck="false"
+                  placeholder="Company (optional)"
+                />
+              </div>
+              <div class="input-container input-3">
+                <input
+                  type="email"
+                  name=""
+                  id=""
+                  class="input-fill"
+                  spellcheck="false"
+                  placeholder="Your email"
+                  required
+                  minlength="4"
+                />
+              </div>
+              <div class="input-container input-4">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  class="input-fill"
+                  spellcheck="false"
+                  placeholder="Phone number"
+                  required
+                  minlength="4"
+                />
+              </div>
+              <div class="input-container input-5">
+                <textarea
+                  type="text"
+                  name=""
+                  id=""
+                  class="input-fill"
+                  placeholder="Tell us about yourself"
+                  minlength="4"
+                ></textarea>
+              </div>
+            </div>
+            <button class="submit-form-btn" type="submit">Contact Us</button>
+          </form>
+        </div>
+      </main>
+
+      <!-- footer -->
+      <%- include("./partial/footer.ejs") %>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

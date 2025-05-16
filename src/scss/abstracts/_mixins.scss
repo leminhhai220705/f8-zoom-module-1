@@ -1,0 +1,101 @@
+@use "./variables" as variables;
+@use "./colors" as colors;
+@use "sass:map";
+
+@mixin margin-to-center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin createHeading($name-part: "") {
+  @if $name-part == "sub-heading" {
+    .sub-heading {
+      font-size: 1.8rem;
+      font-family: variables.$Roboto-Slab-font;
+      font-weight: 400;
+      color: colors.$orange-home;
+      @content;
+    }
+    .heading {
+      font-family: variables.$Roboto-Slab-font;
+      font-weight: 700;
+      font-size: 4.2rem;
+      text-align: center;
+      width: 100%;
+      padding: 0 16.3rem;
+    }
+  }
+
+  @if $name-part == "heading" {
+    .heading {
+      font-family: variables.$Roboto-Slab-font;
+      font-weight: 700;
+      font-size: 4.2rem;
+      text-align: center;
+      width: 100%;
+      padding: 0 16.3rem;
+      @content;
+    }
+    .sub-heading {
+      font-size: 1.8rem;
+      font-family: variables.$Roboto-Slab-font;
+      font-weight: 400;
+      color: colors.$orange-home;
+    }
+  }
+
+  @if $name-part == "" {
+    .sub-heading {
+      font-size: 1.8rem;
+      font-family: variables.$Roboto-Slab-font;
+      font-weight: 400;
+      color: colors.$orange-home;
+    }
+
+    .heading {
+      font-family: variables.$Roboto-Slab-font;
+      font-weight: 700;
+      font-size: 4.2rem;
+      text-align: center;
+      width: 100%;
+      padding: 0 16.3rem;
+    }
+  }
+}
+
+@mixin createLogo() {
+  .logo {
+    display: flex;
+    &-path {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .hammer-icon {
+        font-size: 2.8rem;
+      }
+
+      .name-company {
+        font-size: 2.4rem;
+        font-family: variables.$Roboto-Slab-font;
+        font-weight: 700;
+      }
+
+      .majority {
+        font-size: 1.4rem;
+        font-family: variables.$Roboto-Slab-font;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+@mixin screen($key) {
+  $breakpoint: map.get(variables.$responsive-breakpoints, $key);
+  @if ($breakpoint) {
+    @media (max-width: ($breakpoint - 0.02)) {
+      @content;
+    }
+  } @else {
+    @error 'The value "#{$key}" is not in breakpoints list.';
+  }
+}

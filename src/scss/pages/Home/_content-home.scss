@@ -1,0 +1,1148 @@
+@use "../../abstracts/" as abstracts;
+@use "../../vendors/" as vendors;
+.home-content {
+  .about-us-wrapper {
+    background-color: abstracts.$black-home;
+    padding: 7rem 0;
+
+    // Start About Us
+    .about-us {
+      max-width: 117rem;
+      min-height: 67rem;
+      @include abstracts.margin-to-center();
+
+      color: #ffffff;
+
+      .row {
+        @include abstracts.screen(md) {
+          max-width: 100%;
+        }
+      }
+
+      &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include abstracts.screen(md) {
+          gap: 1.1rem;
+        }
+
+        .sub-heading {
+          max-width: 47rem;
+          min-height: 3rem;
+          font-family: abstracts.$Roboto-Slab-font;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 3rem;
+          color: abstracts.$orange-home;
+
+          @include abstracts.screen(md) {
+            font-size: 1rem;
+          }
+        }
+
+        .heading {
+          max-width: 57rem;
+          min-height: 10.4rem;
+          font-size: 4.2rem;
+          font-family: abstracts.$Roboto-Slab-font;
+          line-height: 1.24;
+          font-weight: 700;
+
+          @include abstracts.screen(md) {
+            font-size: 2.4rem;
+            min-height: auto;
+          }
+        }
+
+        .desc {
+          max-width: 57rem;
+          min-height: 12rem;
+          font-family: abstracts.$Manrope-font;
+          font-weight: 400;
+          font-size: 1.8rem;
+          line-height: 3rem;
+          color: #beccc7;
+
+          @include abstracts.screen(md) {
+            font-size: 1rem;
+            line-height: 2.5;
+          }
+        }
+
+        .list-outstanding {
+          font-family: abstracts.$Manrope-font;
+          font-weight: 600;
+          font-size: 1.8rem;
+          line-height: 3rem;
+          padding: 3.5rem 0;
+
+          @include abstracts.screen(md) {
+            font-size: 1.1rem;
+          }
+
+          .item {
+            display: flex;
+            align-items: center;
+            gap: 1.3rem;
+            padding: 1rem 0;
+          }
+
+          .item::before {
+            content: "\f058";
+            font-family: "Font Awesome 6 Free";
+            font-weight: bold;
+            color: abstracts.$orange-home;
+            font-size: 3rem;
+          }
+        }
+
+        .read-more__btn {
+          font-weight: 600;
+          font-family: abstracts.$Manrope-font;
+          font-size: 1.8rem;
+          display: flex;
+          justify-content: center;
+
+          @include abstracts.screen(md) {
+            max-width: 16.1rem;
+            min-height: 6rem;
+          }
+          a {
+            line-height: 6rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .about-us__img {
+      img {
+        border-radius: 0.5rem;
+      }
+      @include abstracts.screen(xxl) {
+        max-width: 48rem;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+    // End About Us
+
+    @include abstracts.screen(md) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  //   Start Services
+  .main-content {
+    @include abstracts.screen(md) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    background-color: #ffffff;
+    padding: 20rem 0 0;
+
+    .content-inner {
+      max-width: 117rem;
+      min-height: 90rem;
+
+      @include abstracts.margin-to-center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4.6rem;
+
+      @include abstracts.screen(md) {
+        gap: 0;
+      }
+
+      .service {
+        &-heading {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+
+          .sub-heading {
+            font-size: 1.8rem;
+            font-family: abstracts.$Roboto-Slab-font;
+            font-weight: 400;
+            color: abstracts.$orange-home;
+            @include abstracts.screen(md) {
+              font-size: 1rem;
+            }
+          }
+
+          .heading {
+            font-family: abstracts.$Roboto-Slab-font;
+            font-weight: 700;
+            font-size: 4.2rem;
+            max-width: 77rem;
+            text-align: center;
+
+            @include abstracts.screen(md) {
+              font-size: 2.4em;
+            }
+          }
+        }
+
+        &-element {
+          .row {
+            max-width: 100%;
+
+            .col {
+              @include abstracts.screen(md) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              }
+            }
+          }
+          &__child {
+            max-width: 37rem;
+            display: flex;
+            padding: 4rem 2rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 2.4rem;
+            border: 0.1rem solid #e0e0e0;
+            background-color: #fff;
+            border-radius: 1rem;
+            .avatar-service {
+              width: 10rem;
+              max-width: 100%;
+              min-height: 10rem;
+              border-radius: 50%;
+            }
+
+            .service-name {
+              font-family: abstracts.$Manrope-font;
+              font-weight: 700;
+              font-size: 2rem;
+            }
+
+            .service-desc {
+              font-family: abstracts.$Manrope-font;
+              font-weight: 400;
+              font-size: 1.8rem;
+              text-align: center;
+              max-width: 31rem;
+              min-height: 15rem;
+              line-height: 3rem;
+            }
+          }
+
+          &__child.different-element {
+            border: none;
+            box-shadow: 0px 20px 70px 0px #0e141212;
+          }
+
+          @include abstracts.screen(md) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 3rem;
+          }
+        }
+      }
+    }
+  }
+  // End Services
+
+  //   Start Properties
+
+  .properties-wrapper {
+    padding-bottom: 10rem;
+  }
+
+  .properties {
+    &-heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      width: 77rem;
+      max-width: 100%;
+
+      @include abstracts.createHeading();
+
+      @include abstracts.createHeading(heading) {
+        @include abstracts.screen(md) {
+          padding: 0;
+          max-width: 30.8rem;
+          font-size: 2.4rem;
+        }
+      }
+    }
+
+    // start properties-content
+    .properties-content {
+      max-width: 100%;
+      width: 100%;
+      margin-top: 5rem;
+      .properties-element {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+        &__img {
+          max-width: 37rem;
+          min-height: 30.3rem;
+          overflow: hidden;
+          border-radius: 1rem;
+
+          img {
+            transform: scale(1.7);
+          }
+
+          @include abstracts.screen(md) {
+            max-width: 33rem;
+          }
+        }
+
+        .properties-cost {
+          font-family: abstracts.$Manrope-font;
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: abstracts.$orange-home;
+        }
+
+        .properties-name {
+          font-weight: 700;
+          font-size: 2rem;
+          font-family: abstracts.$Manrope-font;
+        }
+
+        .furnites {
+          font-family: abstracts.$Manrope-font;
+          font-weight: 500;
+          font-size: 1.4rem;
+          display: flex;
+          width: 28.1rem;
+          max-width: 100%;
+          justify-content: space-between;
+
+          li {
+            display: flex;
+            gap: 1rem;
+            padding: 0.5rem;
+          }
+        }
+
+        @include abstracts.screen(xl) {
+          align-items: center;
+        }
+      }
+
+      @include abstracts.screen(md) {
+        .row {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
+    // end properties-content
+
+    .point {
+      width: 18.5rem;
+      max-width: 100%;
+      min-height: 1.3rem;
+      display: flex;
+      gap: 2.5rem;
+      padding: 3rem 0 0;
+
+      &-item {
+        width: 13px;
+        max-width: 100%;
+        min-height: 13px;
+        border-radius: 50%;
+        background-color: #e0e0e0;
+      }
+
+      &-item:first-child {
+        background-color: abstracts.$orange-home;
+      }
+    }
+  }
+  // End Properties
+
+  .statistic-wrapper {
+    min-height: 29.5rem;
+    background-color: abstracts.$green-home;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include abstracts.screen(md) {
+      padding: 5rem 0;
+    }
+
+    .general-statistic {
+      width: 117rem;
+      max-width: 100%;
+      min-height: 10.2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      align-items: center;
+      color: #ffffff;
+      @include abstracts.screen(md) {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: start;
+        row-gap: 3rem;
+
+        .statistic-detail {
+          padding: 0 calc((39rem - 11rem) / 2);
+        }
+      }
+
+      h2 {
+        font-family: abstracts.$Roboto-Slab-font;
+        font-weight: 700;
+        font-size: 4.2rem;
+        line-height: 5.2rem;
+      }
+
+      p {
+        font-family: abstracts.$Manrope-font;
+        font-weight: 600;
+        font-size: 1.8rem;
+        line-height: 3rem;
+      }
+    }
+  }
+
+  //   start our project
+  .our-project-wrapper {
+    background-color: abstracts.$black-home;
+    min-height: 133.4rem;
+    display: flex;
+    .our-project {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4.5rem;
+      margin-top: 20rem;
+      max-width: 100%;
+      width: 117rem;
+      min-height: 108.4rem;
+
+      @include abstracts.margin-to-center();
+
+      &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include abstracts.screen(md) {
+          max-width: 100%;
+        }
+
+        @include abstracts.createHeading();
+        .sub-heading {
+          line-height: 3rem;
+          @include abstracts.screen(md) {
+            font-size: 1rem;
+          }
+        }
+
+        .heading {
+          line-height: 5.2rem;
+          color: #ffffff;
+          @include abstracts.screen(md) {
+            padding: 0 3.7rem;
+            line-height: 1.5;
+            font-size: 2.4rem;
+          }
+        }
+      }
+
+      &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 37rem);
+        // grid-template-rows: repeat(2, 37rem);
+        grid-auto-rows: minmax(37rem, auto);
+        gap: 2rem;
+
+        .project-item > * {
+          border-radius: 1rem;
+
+          @include abstracts.screen(xl) {
+            max-width: 100%;
+            height: 100%;
+          }
+        }
+        .project-item:nth-child(5) {
+          margin-top: calc(-1 * (48.6rem - 37rem));
+
+          @include abstracts.screen(xl) {
+            margin-top: 0;
+          }
+        }
+
+        @include abstracts.screen(xl) {
+          grid-template-columns: repeat(2, 37rem);
+        }
+
+        @include abstracts.screen(md) {
+          grid-template-columns: repeat(1, 33rem);
+        }
+      }
+    }
+
+    @include abstracts.screen(xl) {
+      padding-bottom: 5rem;
+    }
+  }
+  // end our project
+
+  // start team member
+
+  .team-member-wrapper {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 15rem 0;
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 114.2rem;
+      max-width: 100%;
+      min-height: 70.7rem;
+      @include abstracts.margin-to-center();
+
+      @include abstracts.createHeading();
+
+      .heading {
+        @include abstracts.screen(md) {
+          padding: 0;
+          font-size: 2.4rem;
+        }
+      }
+      .member-list {
+        margin-top: 9rem;
+
+        .member-panel-wrapper {
+          @include abstracts.screen(xl) {
+            display: flex;
+            justify-content: center;
+          }
+
+          @include abstracts.screen(md) {
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+
+        .member-panel-wrapper .member-panel {
+          background-color: abstracts.$yellow-light;
+          min-height: 47rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          align-items: center;
+          box-shadow: 0px 44px 74px 0px #0000000a;
+          border-radius: 2rem;
+          padding: 1rem 0;
+          overflow: hidden;
+
+          .avatar {
+            width: 32.8rem;
+            max-width: 100%;
+            min-height: 28rem;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              max-width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transform: scale(1.6);
+              object-position: center 50px;
+            }
+          }
+
+          .name {
+            font-family: abstracts.$Roboto-Slab-font;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: abstracts.$black-home;
+          }
+
+          .role {
+            font-family: abstracts.$Manrope-font;
+            font-weight: 500;
+            font-size: 1.8rem;
+          }
+
+          .social-media {
+            display: flex;
+            gap: 1rem;
+          }
+        }
+      }
+
+      .view-member {
+        width: 13.6rem;
+        max-width: 100%;
+        min-height: 6rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3.5rem;
+        border-radius: 0.5rem;
+        a {
+          line-height: 6rem;
+          font-weight: 600;
+          font-size: 1.8rem;
+          font-family: abstracts.$Manrope-font;
+        }
+      }
+    }
+  }
+
+  // end team member
+
+  // Start Testimonials
+  .testimonials-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .testimonials {
+      width: 117rem;
+      max-width: 100%;
+      min-height: 55.9rem;
+
+      // start testimonials-heading
+      .testimonials-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        @include abstracts.createHeading(heading) {
+          max-width: 77rem;
+          padding: 0 9rem;
+          font-size: 4.2;
+          font-family: abstracts.$Roboto-Slab-font;
+          font-weight: 700;
+
+          @include abstracts.screen(md) {
+            padding: 0 3rem;
+            font-size: 2.4rem;
+          }
+        }
+
+        .sub-heading {
+          @include abstracts.screen(md) {
+            padding: 0;
+            font-size: 1rem;
+          }
+        }
+      }
+      // end testimonials-heading
+
+      // start testnimonial-content
+
+      .testimonials-content {
+        padding: 5rem;
+
+        // .testimonials-row {
+        //   @include abstracts.screen(lg) {
+        //     justify-content: center;
+        //   }
+        // }
+
+        .col:first-child > .testimonials-panel {
+          background-color: #ffffff;
+          box-shadow: 0px 20px 70px 0px #0e141212;
+          border: 2px solid #ffffff;
+        }
+
+        .testimonials-panel {
+          min-height: 34.9rem;
+          padding: 2.5rem;
+          display: flex;
+          flex-direction: column;
+          border-radius: 1rem;
+          border: 1px solid #e0e0e0;
+          gap: 1rem;
+
+          .testimonials-feedback {
+            max-width: 31rem;
+            min-height: 15rem;
+            font-family: abstracts.$Manrope-font;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 3rem;
+          }
+
+          .user-info {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            .user-avatar {
+              width: 6rem;
+              max-width: 100%;
+              min-height: 6rem;
+              border-radius: 50%;
+              background-color: #ccc;
+              overflow: hidden;
+
+              img {
+                object-fit: cover;
+                object-position: center;
+              }
+            }
+
+            .name-role {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+              .name {
+                font-family: abstracts.$Manrope-font;
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: abstracts.$black-home;
+              }
+
+              .role {
+                font-family: abstracts.$Manrope-font;
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: #586863;
+              }
+            }
+          }
+
+          .assessment-stars {
+            padding: 1rem 0;
+
+            display: flex;
+            gap: 1.2rem;
+
+            i {
+              color: #f4a641;
+              font-size: 2rem;
+            }
+          }
+        }
+      }
+
+      // end testnimonial-content
+    }
+  }
+  // End Testimonials
+
+  .logo-brands-wrapper {
+    padding: 7rem 0;
+
+    .logo-brands {
+      min-height: 9.1rem;
+      width: 109rem;
+      max-width: 100%;
+      @include abstracts.margin-to-center();
+      display: grid;
+      gap: 4rem;
+      grid-template-columns: repeat(5, calc(20% - 4rem));
+      padding: 0 0 0 4rem;
+
+      @include abstracts.screen(md) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(auto, 9.1rem);
+        padding: 0;
+        gap: 0;
+      }
+    }
+
+    .logo-brands > .item {
+      overflow: hidden;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-brands > .item > img {
+      max-width: 100%;
+      height: 3.3rem;
+      object-fit: contain;
+    }
+  }
+
+  .blog-post-wrapper {
+    padding: 6rem 0;
+    @include abstracts.screen(md) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  .blog-post-container {
+    width: 117rem;
+    max-width: 100%;
+    min-height: 79.7rem;
+
+    @include abstracts.margin-to-center();
+    display: flex;
+    flex-direction: column;
+
+    .blog-post-heading {
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @include abstracts.createHeading(heading) {
+        padding-top: 2rem;
+        max-width: 100%;
+        @include abstracts.screen(md) {
+          padding: 0;
+          padding-top: 2rem;
+        }
+      }
+    }
+
+    .blog-post-content {
+      padding: 5rem 0;
+
+      flex: 1;
+    }
+
+    .row {
+      @include abstracts.screen(lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include abstracts.screen(md) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    // .col {
+    //   display: flex;
+    //   flex-direction: column;
+    //   align-items: center;
+    // }
+
+    .blog-post-content .blog-post-item {
+      max-width: 57rem;
+      min-height: 65.7rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      @include abstracts.screen(md) {
+        // align-items: center;
+        min-height: auto;
+      }
+    }
+
+    .blog-post-content .blog-post-item > *:not(.blog-heading) {
+      padding: 0.8rem 0;
+      color: #586863;
+    }
+    .blog-post-content .blog-post-item .blog-img {
+      width: 100%;
+      min-height: 40.8rem;
+
+      @include abstracts.screen(md) {
+        width: 100%;
+        min-height: auto;
+      }
+
+      img {
+        max-width: 100%;
+        border-radius: 1rem;
+      }
+    }
+
+    .blog-post-content .blog-post-item .blog-heading {
+      font-family: abstracts.$Manrope-font;
+      font-weight: 700;
+      font-size: 2.2rem;
+      color: #000000;
+    }
+
+    .blog-post-content .blog-post-item .blog-time {
+      font-size: 1.6rem;
+      font-family: abstracts.$Manrope-font;
+      font-weight: 400;
+    }
+
+    .blog-post-content .blog-post-item .blog-desc {
+      font-size: 1.6rem;
+      font-family: abstracts.$Manrope-font;
+      font-weight: 400;
+    }
+
+    .blog-post-content .blog-post-item .blog-read-more {
+      font-size: 1.8rem;
+      font-family: abstracts.$Manrope-font;
+      font-weight: 600;
+      color: abstracts.$orange-home;
+      display: inline-block;
+      max-width: 11rem;
+    }
+  }
+
+  // start FAQ
+
+  .faq-wrapper {
+    padding: 6rem 0;
+    .faq-container {
+      max-width: 97rem;
+      min-height: 65.2rem;
+      @include abstracts.margin-to-center();
+      display: flex;
+      flex-direction: column;
+
+      .faq-heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        @include abstracts.createHeading();
+
+        @include abstracts.createHeading(heading) {
+          @include abstracts.screen(md) {
+            padding: 0;
+            font-size: 2.4rem;
+          }
+        }
+      }
+
+      @include abstracts.createHeading(sub-heading) {
+        @include abstracts.screen(md) {
+          padding: 0;
+          font-size: 1rem;
+        }
+      }
+
+      .faq-content {
+        padding: 5rem 0;
+        flex: 1;
+        // background-color: #ccc;
+      }
+
+      .faq-content .faq-questions {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .faq-content .faq-questions .item {
+        padding: 5rem 0;
+        border-bottom: 1px solid #e0e0e0;
+
+        @include abstracts.screen(lg) {
+          padding: 5rem;
+        }
+
+        @include abstracts.screen(lg) {
+          padding: 3rem;
+        }
+      }
+
+      .faq-content .faq-questions .item h4 {
+        font-size: 2.2rem;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 700;
+        color: abstracts.$black-home;
+
+        @include abstracts.screen(md) {
+          font-size: 1.2rem;
+          line-height: 18px;
+        }
+      }
+
+      .faq-content .faq-questions .item p {
+        font-size: 1.8em;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 400;
+        color: #586863;
+        padding: 3rem 0 0;
+
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+          line-height: 16px;
+        }
+      }
+
+      .faq-content .faq-questions .item .item-heading {
+        display: flex;
+        justify-content: space-between;
+        @include abstracts.screen(md) {
+          position: relative;
+        }
+      }
+
+      .faq-content .faq-questions .item .item-heading i {
+        display: inline-block;
+        font-size: 2.5rem;
+
+        @include abstracts.screen(md) {
+          position: absolute;
+          top: 4px;
+          right: -7px;
+          width: 14px;
+          height: 14px;
+          font-size: 0.5rem;
+        }
+      }
+
+      .faq-content .faq-questions .item:not(:first-child) .item-heading i {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        border: 1px solid #0e1412;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0e1412;
+
+        @include abstracts.screen(md) {
+          width: 14px;
+          height: 14px;
+          font-size: 0.5rem;
+        }
+      }
+
+      .faq-content .faq-questions .item:first-child .item-heading i {
+        color: abstracts.$orange-home;
+
+        @include abstracts.screen(md) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  // End FAQ
+
+  // Start Newsletter-subcribe
+
+  .newsletter-subcribe-wrapper {
+    padding: 5rem 0;
+    .newsletter-subcribe-container {
+      width: 117rem;
+      max-width: 100%;
+      min-height: 34.9rem;
+      border-radius: 2rem;
+      @include abstracts.margin-to-center();
+      background-color: abstracts.$orange-home;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      color: #ffffff;
+
+      .newsletter-subcribe-heading {
+        font-family: abstracts.$Roboto-Slab-font;
+        font-size: 4.2rem;
+        font-weight: 700;
+
+        @include abstracts.screen(md) {
+          font-size: 2.4rem;
+        }
+      }
+
+      .newsletter-subcribe-desc {
+        max-width: 40.1rem;
+        text-align: center;
+        line-height: 1.8;
+        font-family: abstracts.$Manrope-font;
+        font-size: 1.6rem;
+        font-weight: 600;
+
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+        }
+      }
+
+      .email-submission {
+        width: 45rem;
+        max-width: 100%;
+        min-height: 6rem;
+        display: flex;
+        background-color: #ffffff;
+        padding: 0 1rem;
+        border-radius: 12px;
+
+        @include abstracts.screen(md) {
+          width: 25.5rem;
+          min-height: 3.4rem;
+        }
+      }
+
+      .email-submission input {
+        width: 100%;
+        border: none;
+        outline: none;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 600;
+        font-size: 1.6rem;
+        padding: 0 1.5rem 0 1rem;
+
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+        }
+      }
+
+      .email-submission input::placeholder {
+        color: #b3b4b5;
+      }
+
+      .email-submission .email-btn {
+        flex-basis: 4rem;
+        a {
+          background-color: #fd6038;
+          box-shadow: 0px 5px 14px 0px #f7674340;
+          height: 4rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #ffffff;
+          border-radius: 8px;
+          font-size: 1.5rem;
+
+          @include abstracts.screen(md) {
+            width: 2.267rem;
+            height: 2.267rem;
+            padding: 1rem;
+          }
+        }
+        @include abstracts.screen(md) {
+          flex-basis: auto;
+        }
+      }
+
+      @include abstracts.screen(xl) {
+        max-width: 70rem;
+        min-height: 20.9rem;
+        padding: 5rem 0;
+      }
+
+      @include abstracts.screen(md) {
+        max-width: 33rem;
+        min-height: 19.8rem;
+        padding: 5rem 0;
+      }
+    }
+  }
+
+  // End Newsletter-subcribe
+}

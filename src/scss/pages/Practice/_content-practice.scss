@@ -1,0 +1,309 @@
+@use "../../abstracts/" as abstracts;
+@use "../../vendors/grid-system-newest" as grid-system;
+
+.practice-wrapper {
+  display: flex;
+  flex-direction: column;
+  // practice header
+  .practice-header-wrapper {
+    background-color: abstracts.$yellow-light;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 53rem;
+
+    @include abstracts.screen(md) {
+      min-height: 26.6rem;
+    }
+
+    .practice-header-nav {
+      .mobile-tablet-nav {
+        @include abstracts.screen(md) {
+          padding-top: 2rem;
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    .header-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include abstracts.screen(md) {
+        justify-content: start;
+        padding: 5rem 1rem 0;
+        padding-top: 5rem;
+        margin: 0;
+        min-height: 136px;
+      }
+
+      .heading {
+        font-family: abstracts.$Roboto-Slab-font;
+        font-size: 6rem;
+        font-weight: 800;
+        color: #0e1412;
+        line-height: 7rem;
+        width: 670px;
+        max-width: 100%;
+        text-align: center;
+
+        @include abstracts.screen(md) {
+          font-size: 3rem;
+          line-height: 35px;
+        }
+      }
+
+      .slg {
+        font-family: abstracts.$Manrope-font;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 3rem;
+        width: 670px;
+        max-width: 100%;
+        text-align: center;
+        padding-top: 2rem;
+
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  //   start practice area
+  .practice-area-wrapper {
+    padding-top: 8.8rem;
+    @include abstracts.screen(md) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .practice-area {
+      display: flex;
+      flex-direction: column;
+
+      width: 117rem;
+      min-height: 100.6rem;
+      max-width: 100%;
+      @include abstracts.margin-to-center();
+
+      &__heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        @include abstracts.createHeading(sub-heading) {
+          color: #586863 !important;
+
+          @include abstracts.screen(md) {
+            font-size: 1.2rem !important;
+          }
+        }
+
+        @include abstracts.createHeading(heading) {
+          padding: 0 !important;
+
+          @include abstracts.screen(md) {
+            font-size: 3rem;
+            line-height: 37px;
+          }
+        }
+
+        .desc {
+          color: #586863;
+          width: 47rem;
+          max-width: 100%;
+          font-size: 1.8rem;
+          text-align: center;
+
+          @include abstracts.screen(md) {
+            font-size: 1.2rem;
+            line-height: 21px;
+          }
+        }
+      }
+
+      &__content {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 37rem);
+        grid-auto-rows: 37rem;
+        justify-content: center;
+        align-content: end;
+        gap: calc((117rem - 37rem * 3) / 2);
+
+        @include abstracts.screen(xl) {
+          grid-template-columns: repeat(2, 37rem);
+          padding-top: 3rem;
+        }
+
+        @include abstracts.screen(lg) {
+          grid-template-columns: repeat(1, 37rem);
+          padding-top: 3rem;
+        }
+
+        @include abstracts.screen(md) {
+          grid-template-columns: repeat(1, 33rem);
+          padding-top: 3rem;
+        }
+
+        .content-item {
+          background-repeat: no-repeat;
+          display: flex;
+          justify-content: center;
+          align-items: end;
+          padding-bottom: 2rem;
+        }
+
+        .content-item .select-content {
+          width: 33rem;
+          max-width: 100%;
+          min-height: 72px;
+          background-color: #ffffff;
+          display: flex;
+
+          @include abstracts.screen(md) {
+            width: 29rem;
+            min-height: 65px;
+          }
+
+          a {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: abstracts.$Manrope-font;
+            font-weight: 700;
+            font-size: 2.2rem;
+            color: #0e1412;
+
+            @include abstracts.screen(md) {
+              font-size: 1.9rem;
+            }
+          }
+        }
+
+        .content-1 {
+          background-image: url("./img/Personal Injury Law.png");
+          background-size: cover;
+        }
+
+        .content-1 .select-content {
+          background-color: abstracts.$orange-home;
+          a {
+            color: #ffffff;
+          }
+        }
+
+        .content-2 {
+          background-image: url("./img/employment.png");
+          background-size: cover;
+        }
+
+        .content-3 {
+          background-image: url("./img/Immigration Law.png");
+          background-size: cover;
+        }
+
+        .content-4 {
+          background-image: url("./img/Family Law.png");
+          background-size: cover;
+        }
+
+        .content-5 {
+          background-image: url("./img/Divorce Law.png");
+          background-size: cover;
+        }
+
+        .content-6 {
+          background-image: url("./img/Property Law.png");
+          background-size: cover;
+        }
+      }
+    }
+  }
+  // end practice area
+
+  //   Practice-Consultant
+
+  .practice-consultant-wrapper {
+    padding-top: 9rem;
+
+    .practice-consultant {
+      min-height: 49.4rem;
+      padding: 0 3rem;
+      background-color: #017848;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      color: #ffffff;
+      @include abstracts.createHeading(sub-heading) {
+        color: #ffffff;
+
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+        }
+      }
+
+      .heading {
+        @include abstracts.screen(lg) {
+          padding: 0;
+        }
+        @include abstracts.screen(md) {
+          font-size: 2.4rem;
+        }
+      }
+
+      .desc {
+        font-weight: 400;
+        font-size: 1.8rem;
+        font-family: abstracts.$Manrope-font;
+        max-width: 47rem;
+        text-align: center;
+        line-height: 30px;
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+          max-width: 27.6rem;
+          line-height: 17px;
+        }
+      }
+
+      .consultant-btn {
+        width: 24.2rem;
+        max-width: 100%;
+        @include abstracts.screen(md) {
+          width: 14.23rem;
+          min-height: 35px;
+        }
+      }
+
+      .consultant-btn a {
+        font-family: abstracts.$Manrope-font;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 6rem;
+
+        @include abstracts.screen(md) {
+          font-size: 1.05rem;
+          line-height: 3.5rem;
+        }
+      }
+
+      @include abstracts.screen(md) {
+        min-height: 25.3rem;
+        gap: 2rem;
+      }
+    }
+  }
+
+  .footer-wrapper {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,195 @@
+@use "../../abstracts/" as abstracts;
+@use "../../vendors/" as vendors;
+.header {
+  min-height: 85.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  //   Start Header Content
+  &-content {
+    @include abstracts.margin-to-center();
+    min-height: 56.1rem;
+    max-width: 100%;
+    width: 117rem;
+
+    &__inside {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      font-family: abstracts.$Manrope-font;
+
+      .heading {
+        max-width: 57rem;
+        min-height: 14rem;
+        font-family: abstracts.$Roboto-Slab-font;
+        font-weight: 800;
+        font-size: 6rem;
+        line-height: 1.2;
+
+        @include abstracts.screen(md) {
+          font-size: 3.5rem;
+          min-height: 8.2rem;
+          line-height: 41px;
+        }
+      }
+
+      .description {
+        max-width: 47rem;
+        min-height: 12rem;
+        font-family: abstracts.$Manrope-font;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.67;
+
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+          min-height: 5rem;
+          line-height: 17px;
+        }
+      }
+
+      .find-btn {
+        border-radius: 0.4rem;
+        a {
+          display: block;
+          line-height: 6rem;
+          font-size: 1.8rem;
+          font-family: abstracts.$Manrope-font;
+          font-weight: 600;
+          @include abstracts.screen(md) {
+            line-height: 3.5rem;
+            font-size: 10.58px;
+          }
+        }
+
+        @include abstracts.screen(md) {
+          max-width: 13.4rem;
+          min-height: 3.5rem;
+        }
+      }
+
+      @include abstracts.screen(md) {
+        gap: 2rem;
+      }
+    }
+
+    .header-img {
+      display: flex;
+      justify-content: flex-end;
+
+      img {
+        max-width: 47rem;
+        border-radius: 1rem;
+
+        @include abstracts.screen(md) {
+          width: 100%;
+        }
+      }
+
+      @include abstracts.screen(lg) {
+        max-width: 100%;
+        img {
+          max-width: 100%;
+          border-radius: 1rem;
+        }
+      }
+
+      @include abstracts.screen(md) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .header-drop-wrapper {
+      position: relative;
+      box-shadow: 0px 20px 70px 0px #0e141212;
+      margin-top: 6rem;
+      padding: 4rem 0;
+
+      .header-drop {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        max-width: 60%;
+
+        strong {
+          font-size: 2.2rem;
+          font-family: abstracts.$Manrope-font;
+          font-weight: 700;
+          line-height: 32px;
+          @include abstracts.screen(lg) {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+          }
+        }
+
+        &__choosing {
+          width: 100%;
+          max-width: 100%;
+          text-align: center;
+          a {
+            display: block;
+            padding-left: 3rem;
+            font-size: 1.4rem;
+            font-family: abstracts.$Manrope-font;
+            font-weight: 400;
+            line-height: 24px;
+            i {
+              padding-left: 0.6rem;
+            }
+
+            @include abstracts.screen(lg) {
+              padding-left: 2.5rem;
+            }
+          }
+          @include abstracts.screen(lg) {
+            text-align: start;
+          }
+        }
+
+        @include abstracts.screen(lg) {
+          align-items: stretch;
+        }
+      }
+
+      .search-btn {
+        width: 6.4rem;
+        max-width: 100%;
+        min-height: 5.4rem;
+        position: absolute;
+        top: 47px;
+        right: 73px;
+        border-radius: 6px;
+        a {
+          line-height: 5.4rem;
+          font-size: 1.9rem;
+        }
+
+        @include abstracts.screen(lg) {
+          top: -50px;
+          left: 0px;
+        }
+      }
+
+      @include abstracts.screen(lg) {
+        box-shadow: none;
+        margin: 15rem auto 6rem;
+      }
+
+      & .col:nth-child(2) .header-drop,
+      & .col:nth-child(3) .header-drop {
+        margin-left: -0.5rem;
+      }
+    }
+
+    @include abstracts.screen(md) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+      margin-top: -5rem;
+    }
+  }
+  //   End Header Content
+}

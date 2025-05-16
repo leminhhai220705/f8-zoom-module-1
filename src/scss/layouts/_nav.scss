@@ -1,0 +1,110 @@
+@use "../abstracts/" as abstracts;
+@use "../vendors/" as vendors;
+.header-nav {
+  width: 117rem;
+  max-width: 100%;
+  @include abstracts.margin-to-center();
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  @include abstracts.createLogo();
+  @include abstracts.screen(xl) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  // nav
+  .nav {
+    &-content {
+      display: flex;
+      gap: 4.5rem;
+      // margin-left: 150px;
+
+      &__child {
+        position: relative;
+
+        &:hover .item i {
+          transform: rotate(-180deg);
+        }
+
+        & .item i {
+          transition: transform 0.3s ease-in-out;
+        }
+        .sub-menu {
+          z-index: 999;
+          width: 300px;
+          position: absolute;
+          top: 70px;
+          right: 0;
+          left: 0;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.5s ease-in-out;
+          background-color: #f9f9f9;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+            0 4px 6px rgba(0, 0, 0, 0.08);
+          border-radius: 5px;
+        }
+
+        &:hover .sub-menu {
+          max-height: 1000px;
+        }
+
+        .sub-menu .sub-menu__item:hover,
+        .sub-menu .sub-menu__item:hover a {
+          background-color: abstracts.$orange-home;
+          color: #ffffff;
+        }
+
+        .sub-menu .sub-menu__item,
+        .sub-menu__item a {
+          transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .sub-menu .sub-menu__item a {
+          display: block;
+          padding: 2rem 2rem;
+          font-size: 1.6rem;
+          font-family: abstracts.$Manrope-font;
+          line-height: 28px;
+          color: #586863;
+        }
+      }
+
+      &__child:hover > .item {
+        color: abstracts.$orange-home;
+      }
+
+      .item {
+        display: flex;
+        line-height: 6.6rem;
+        font-size: 1.6rem;
+        font-family: abstracts.$Manrope-font;
+        font-weight: 400;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  }
+
+  .phone-contact {
+    display: flex;
+    align-items: center;
+    .call {
+      font-family: abstracts.$Manrope-font;
+      font-weight: 400;
+      font-size: 1.6rem;
+      padding-right: 0.5rem;
+    }
+
+    .phone-number {
+      font-family: abstracts.$Manrope-font;
+      font-weight: 700;
+      font-size: 2.2rem;
+    }
+  }
+
+  @include abstracts.screen(lg) {
+    display: none;
+  }
+}

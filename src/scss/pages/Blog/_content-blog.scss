@@ -1,0 +1,160 @@
+@use "../../abstracts/" as abstracts;
+.blog-wrapper {
+  display: flex;
+  flex-direction: column;
+  .blog-nav-wrapper {
+    background-color: abstracts.$yellow-light;
+    padding: 2rem 0;
+
+    @include abstracts.screen(md) {
+      padding: 1rem 0;
+    }
+
+    // .mobile-tablet-nav {
+    //   @include abstracts.screen(md) {
+    //     padding: 1rem 2rem;
+    //   }
+    // }
+  }
+
+  .blog-main {
+    width: 117rem;
+    max-width: 100%;
+    @include abstracts.margin-to-center();
+
+    .blog-heading-wrapper {
+      padding-top: 6rem;
+
+      .blog-heading {
+        padding: 0 1rem;
+
+        @include abstracts.screen(xl) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        @include abstracts.screen(xl) {
+          display: block;
+        }
+      }
+      .blog-heading .heading {
+        font-size: 6rem;
+        font-family: abstracts.$Roboto-Slab-font;
+        font-weight: 800;
+        line-height: 70px;
+
+        @include abstracts.screen(md) {
+          font-size: 3.5rem;
+          line-height: 41px;
+        }
+      }
+
+      .blog-heading .desc {
+        font-family: abstracts.$Manrope-font;
+        font-weight: 400;
+        font-size: 1.6rem;
+        max-width: 47rem;
+        line-height: 28px;
+        padding: 2rem 0;
+        color: #586863;
+
+        @include abstracts.screen(md) {
+          font-size: 1rem;
+          line-height: 16px;
+        }
+      }
+    }
+
+    .blog-content-wrapper {
+      padding-top: 6rem;
+
+      @include abstracts.screen(md) {
+        padding-top: 0;
+      }
+      .blog-content {
+        display: grid;
+        grid-template-columns: repeat(4, 26.8rem);
+        grid-auto-rows: minmax(32.3rem, auto);
+        justify-content: center;
+        gap: 25px;
+
+        @include abstracts.screen(xl) {
+          grid-template-columns: repeat(3, 26.8rem);
+        }
+
+        @include abstracts.screen(lg) {
+          grid-template-columns: repeat(2, 26.8rem);
+        }
+
+        @include abstracts.screen(md) {
+          grid-template-columns: repeat(1, minmax(26.8rem, auto));
+        }
+      }
+
+      .blog-content .blog-content__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .blog-img {
+          aspect-ratio: 1.32673267327 / 1;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .blog-content .blog-content__item .blog-content-heading {
+        font-size: 1.8rem;
+        font-weight: 500;
+        font-family: abstracts.$Manrope-font;
+        line-height: 30px;
+        margin-top: 1.7rem;
+      }
+
+      .blog-content .blog-content__item .time {
+        font-size: 1.6rem;
+        font-weight: 400;
+        font-family: abstracts.$Manrope-font;
+        line-height: 28px;
+        margin-top: auto;
+      }
+
+      & .load-more-btn {
+        width: 16rem;
+        min-height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        a {
+          line-height: 6rem;
+          font-family: abstracts.$Manrope-font;
+          font-weight: 600;
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    @include abstracts.screen(xl) {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+
+    @include abstracts.screen(md) {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  .footer-wrapper {
+    margin-top: 15.5rem;
+  }
+}

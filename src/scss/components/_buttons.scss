@@ -1,0 +1,12 @@
+@use "../abstracts/" as abstracts;
+.btn {
+  max-width: 22.9rem;
+  min-height: 6rem;
+  background-color: abstracts.$orange-home;
+  color: #ffffff;
+
+  a {
+    display: block;
+    height: 100%;
+  }
+}
