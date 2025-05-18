@@ -528,6 +528,11 @@
       }
       .member-list {
         margin-top: 9rem;
+        @include abstracts.screen(md) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
 
         .member-panel-wrapper {
           @include abstracts.screen(xl) {

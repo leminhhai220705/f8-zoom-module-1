@@ -85,11 +85,11 @@
       @include abstracts.screen(lg) {
         flex-direction: column;
         gap: 2rem;
-        padding: 2rem 4rem;
+        padding: 2rem 4rem 4rem;
       }
 
       @include abstracts.screen(md) {
-        padding: 2rem 0;
+        padding: 2rem 0 4rem;
       }
 
       padding: 4rem 0 3rem;
